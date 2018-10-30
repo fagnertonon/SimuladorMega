@@ -2,10 +2,14 @@
     <li id={{concurso.Id}} class="row" ng-repeat='concurso in concursos.items'>
         <h2>Concurso N°: {{concurso.Id}} data: {{concurso.Data}}</h2>
         <ul>
-            <li id='numeros' class="">
-                <div class="col-md-2 well brick" ng-repeat='(numeros, numero) in concurso.Numeros'>{{numeros}}</div>
-
-                <div id='ganhadores'>
+            <li id='concurso' class="">
+                <div class="row numeros">
+                    <div class="col-md-2 col-sm-4 numero" ng-repeat='(numeros, numero) in concurso.Numeros'>
+                        {{numeros}}
+                    </div>
+                </div>
+                
+                <div class='ganhadores'>
                     <p class="ganhador">Ganhador Sena: {{concurso.GanhadorSena}} valor: {{concurso.ValorSena}}</p>
                     <p class="ganhador">Ganhador Quina: {{concurso.GanhadorQuina}} valor: {{concurso.ValorQuina}}</p>
                     <p class="ganhador">Ganhador Quadra: {{concurso.GanhadorQuina}} valor: {{concurso.ValorQuadra}}</p>

@@ -10,6 +10,9 @@
 angular.module('simuladorMegaApp')
   .service('concursoFinder', function () {
     this.getConcursos = function () {
-      return $get('/concursos.json');
+      return $.get('./concursos.json');
+    }
+    this.GerarConcurso =  function () {
+      
     }
   });
